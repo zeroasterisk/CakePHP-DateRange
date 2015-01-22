@@ -4,9 +4,9 @@ A basic DateRange class
 
 ### Install
 
-    git submodule add git@github.com:zeroasterisk/CakePHP-DateRange.git app/Plugin/DateRange
+    git submodule add https://github.com/zeroasterisk/CakePHP-DateRange.git app/Plugin/DateRange
 	  or
-    git clone git@github.com:zeroasterisk/CakePHP-DateRange.git app/Plugin/DateRange
+    git clone https://github.com/zeroasterisk/CakePHP-DateRange.git app/Plugin/DateRange
 
 add `app/Config/bootstrap.php`
 
