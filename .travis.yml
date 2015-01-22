@@ -1,0 +1,49 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+  - hhvm
+
+env:
+  global:
+    - PLUGIN_NAME=DateRange
+    - PLUGIN_PATH=Plugin/DateRange
+    - REQUIRE="imsamurai/cakephp-environment:dev-master phpdocumentor/phpdocumentor:2.*"
+    - DB=mysql
+    - CAKE_VERSION=2.4
+    - secure: VI9PCi/3L+vP78R3UGNFmk3je5NuZ/mF+i9RXTLHbI6PVnikhTvN2UfJ2v9KFFh1RJo6/jx64nJAq4KXsqKnWKaz7MSV0gADMxlSr3TS/Gkk1+QbUgP22QX91os9LtRBNVPt1TJVdL2+yZQOIdzEeaC2bAMvce901vRI6B9KhlQ=
+  matrix:
+    - CAKE_VERSION=2.3
+    - CAKE_VERSION=2.4
+    - CAKE_VERSION=2.5
+
+matrix:
+  include:
+    - php: 5.5
+      env:
+        - COVERALLS=1
+    - php: 5.5
+      env:
+        - PHPCS=1
+    - php: 5.5
+      env:
+        - FOC_VALIDATE=1
+    - php: 5.5
+      env:
+        - PHPDOC=1
+
+before_script:
+  - git clone git://github.com/imsamurai/travis-plugin-build.git --depth 1 travis
+  - chmod +x ./travis/*
+  - mkdir Config && touch Config/bootstrap.php
+  - ./travis/before_script.sh
+
+script:
+  - ./travis/script.sh
+
+after_success:
+  - ./travis/after_success.sh
+
+notifications:
+  email: zeroasterisk@gmail.com

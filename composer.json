@@ -1,0 +1,32 @@
+{
+  "name": "zeroasterisk/cakephp-daterange",
+  "description": "Lib and Behavior to manage datetime range",
+  "type": "cakephp-plugin",
+  "keywords": [
+    "daterange",
+    "datetime",
+    "cakephp",
+    "plugin"
+  ],
+  "homepage": "https://github.com/zeroasterisk/CakePHP-DateRange",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alan Blount",
+      "email": "zeroasterisk@gmail.com",
+      "homepage": "https://zeroasterisk.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "composer/installers": "*"
+  },
+  "support": {
+    "email": "zeroasterisk@gmail.com",
+    "issues": "https://github.com/zeroasterisk/CakePHP-DateRange/issues",
+    "source": "https://github.com/zeroasterisk/CakePHP-DateRange"
+  },
+  "extra": {
+    "installer-name": "DateRange"
+  }
+}
